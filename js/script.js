@@ -90,56 +90,59 @@ $(document).ready(function(){
     //    first slider
     
 
-                let btnright= document.querySelector(".right");
-                let btnleft= document.querySelector(".left");
-                btnright.addEventListener("click",function(){                
-                    let active=document.querySelector(".active");                
-                    active.classList.remove("active")               
-
-                if(active.nextElementSibling!=null){
-                    active.nextElementSibling.classList.add("active")             
-                   }
-                else{
-                    active.parentNode.firstElementChild.classList.add("active")
-                }               
-                
-                })
-                btnleft.addEventListener("click",function(){
-                    let active=document.querySelector(".active");
-                    active.classList.remove("active")
-                    if(active.previousElementSibling!=null){
-                        active.previousElementSibling.classList.add("active")
-                    }
-                    else{
-                        active.parentNode.lastElementChild.classList.add("active")
-                    }             
-                    
-                    
-                })
+                    $(".slider-gallery").owlCarousel({
+                        items: 4,
+                        mouseDrag: true,
+                        dots: true,
+                        nav:true,
+                        autoplay: true,
+                        loop: true,
+                        animateOut: "fadeOut",
+                        smartSpeed: 800
+                    });
+            
 
 
-                // last slider 
-                
-                
-  
-
-            //    accordions
-            // Add minus icon for collapse element which is open by default
-        $(".collapse.show").each(function(){
-        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
-        });
-        
-        // Toggle plus minus icon on show hide of collapse element
-        $(".collapse").on('show.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
-        }).on('hide.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
-        });
-           
-
-
-        
-        
+                // last slider               
+                    $(".up").click(function(){
+                        $("html").animate({scrollTop: $(".header").offset().top})
+                      });
+                     
     
 
 })
+
+let btnright= document.querySelector(".right");
+let btnleft= document.querySelector(".left");
+btnright.addEventListener("click",function(){                
+    let activ=document.querySelector(".activ");                
+    activ.classList.remove("activ")               
+
+if(activ.nextElementSibling!=null){
+    activ.nextElementSibling.classList.add("activ")             
+   }
+else{
+    activ.parentNode.firstElementChild.classList.add("activ")
+}               
+
+})
+btnleft.addEventListener("click",function(){
+    let activ=document.querySelector(".activ");
+    activ.classList.remove("activ")
+    if(activ.previousElementSibling!=null){
+        activ.previousElementSibling.classList.add("activ")
+    }
+    else{
+        activ.parentNode.lastElementChild.classList.add("activ")
+    }                   
+})
+$(".slider-gallery").owlCarousel({
+    items: 4,
+    mouseDrag: true,
+    dots: true,
+    nav:true,
+    autoplay: true,
+    loop: true,
+    animateOut: "fadeOut",
+    smartSpeed: 800
+});

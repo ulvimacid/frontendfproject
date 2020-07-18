@@ -182,7 +182,7 @@ header nav .col-3 .sosial-list li a{
 #slider .right{
   right:0px;
 }
-.active{
+.activ{
   opacity: 1 !important;
 }
 .leftSide {
@@ -207,7 +207,7 @@ header nav .col-3 .sosial-list li a{
   font-size: 17.64706px;
 }
 /* start shop card image  */
-.shop-card{
+.shop-card,.shop-cart{
   width: 98%;
   color: #1b1b1b;
   font-size: 12px;
@@ -486,7 +486,7 @@ header{
     cursor: pointer;
   }
   .fa-times{
-    right: 50px;
+    right: 30px;
     top: 30px;
     position: absolute;
     color: rgb(243, 161, 8);
@@ -570,4 +570,37 @@ header{
   .small-image{
     display: none;
   } 
+  .slider2{
+    display: none;
+  }
+}
+.slider2{
+  margin-top: 100px;
+}
+.slider2 img{
+  height: 300px;  
+}
+
+.slider2 .owl-item{  
+  height: 300px;
+  background-color: white; 
+}
+.middle-flower-card{
+  width: 250px;
+  height: 350px;
+  margin-top: 150px;
+}
+
+.up{
+  z-index: 20000000;
+  text-align: center;
+  font-size: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  background-color: #f34f3f;
+  color: white; 
+  transform: rotate(90deg);
+  cursor: pointer;
+  display: inline-block;
 }

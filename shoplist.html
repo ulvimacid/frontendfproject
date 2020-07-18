@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accardion</title>
+    <title>Shop List</title>
     <link rel="icon" href="image/shop2.jpg">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" 
     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="scss/product.css">
-    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!-- header   -->
-    <header class="header" >
-        <nav>
-            <div class="container-fluid ">
+     <!-- header   -->
+     <header class="header"  >
+        <nav >
+            <div  class="container-fluid " >
                
                 <div class="row">
                     <!-- responsive nav  -->
@@ -50,7 +51,7 @@
                         <li><a href="">Shop</a><i class="fas fa-caret-right"></i>
                             
                             <div class="li-shop">
-                                <p><a href="">Main Home</a></p>
+                                <p><a href="#product.html">Main Home</a></p>
                                 <p><a href="">Grid Home</a></p>
                                 <p><a href="">Animated Slider</a></p>
                                 <p><a href="">Metro Showcase</a></p>
@@ -115,7 +116,7 @@
                                     <li><a href="">Contact Us</a></li>
                                 </ul>
                             </li>
-                            <li class="shop"><a href="#product.html">Shop</a> 
+                            <li class="shop"><a href="">Shop</a> 
                                 <ul>
                                     <li><a href="">Product Type</a>                                     
                                      </li> 
@@ -168,23 +169,180 @@
                 </div>
             </div>              
         </nav>
-    </header> 
-    <!-- tabs section   -->
- <section class="product-section">
+    </header>
+    
+<!-- product list  -->
+<section class="product-section">
     <div class="container-fluid">
         <div class="row pl-5">
             <div class="product">
-               <h1>Accordions</h1>
+               <h1>Shop List</h1>              
             </div>
         </div>
     </div> 
+    </section>
+
+    <!-- flower card section  -->
+    <div class="container">
+        <div class="row mt-5 ">
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="card shop-card">
+                    <img src="image/shop1.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <button class="add-cart"> add card</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 ">
+                <div class="card shop-card" >
+                    <img src="image/shop2.jpg" class="card-img-top" alt="..."> 
+                    <div class="card-body text-center">
+                        <button class="add-cart"> add card</button>
+                    </div>                   
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="card shop-card" >
+                    <img src="image/shop3.jpg" class="card-img-top" alt="..."> 
+                    <div class="card-body text-center">
+                        <button class="add-cart"> add card</button>
+                    </div>                  
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="card shop-card" >
+                    <img src="image/shop4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                    <button class="add-cart "> add card</button>
+                    </div>                    
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- flower card slider  -->
+<section>
+<div  class="container " style="overflow: hidden;">
+    <div class="row mt-5 bg-light">
+        <div  class="slider2" >
+            <div style="overflow: hidden;" class="owl-carousel slider-gallery d-flex">
+                <div>
+                    <div class="card shop-cart" >
+                        <div class="new-flower">New</div>
+                        <img src="image/shop10.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">Summer SNOWFLAKE </p>
+                          <p class="flowPrice"><del>250$</del>129$</p></div>
+                      
+                </div></div>
+                <div> 
+                    <div class="card shop-cart" >
+                        <div class="new-flower">New</div>
+                        <img src="image/shop11.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">SWEET ALYSSUM </p>
+                          <p class="flowPrice">219$</p>
+                        </div>
+                      
+                </div></div>
+                <div>
+                    <div class="card shop-cart" >
+                        <img src="image/shop12.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">SPRING lorem </p>
+                          <p class="flowPrice"><del>250$</del>129$</p>
+                        </div>
+                     
+                </div></div>
+                <div>
+                    <div class="card shop-cart" >
+                        <div class="sold-flower">sold</div>
+                        <img src="image/shop13.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">SCARLET SAGE </p>
+                          <p class="flowPrice">359$</p>
+                        </div>
+                      
+                </div></div>
+                <div>
+                    <div class="card shop-cart" >
+                        <div class="new-flower">New</div>
+                        <img src="image/shop4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text text-center">SPRING SNOWFLAKE </p>
+                          <p class="flowPrice"><del>250$</del>129$</p>
+                        </div>
+                      
+                </div></div>          
+                             
+            </div>
+        </div>
+    </div>
+</div>
+ </section>
+<section class="updown">
+    <div class="container">
+        <div class="row d-flex justify-content-around">
+            <div class="card shop-card middle-flower-card " >
+                <img src="image/shop11.jpg" class="card-img-top" alt="...">
+                <div class="card-body ">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop12.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop13.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop5.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop13.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop3.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop13.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+              <div class="card shop-card middle-flower-card" >
+                <img src="image/shop5.jpg" class="card-img-top" alt="...">
+                <div class="card-body border-0">
+                  <p class="card-text text-center">WILD ROSES </p>
+                  <p class="flowPrice">259$</p>
+                </div>
+              </div>
+        </div>
+    </div>
 </section>
 
-<!-- accordions  -->
 
-
-
-    <!-- footer 
 <footer >
     <div class="container-fluid ">
        <div class="container">
@@ -282,9 +440,11 @@
            </div>
         </div>
    
-</footer> -->
+</footer>
 <div class="up"><span><</span></div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/script.js"></script> 
+
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script> 
+<script src="js/script.js"></script>
 </html>
