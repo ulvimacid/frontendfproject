@@ -1,0 +1,208 @@
+
+
+.product{
+  padding: 50px 85px;
+}
+.product h1{
+    color: #0e0e0e;  
+    font-size: 50px;
+    line-height: 1.32em;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product p{
+    vertical-align: middle;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #6d6a6a  
+}
+/* end product  */
+
+/* start view  card */
+
+.view-card p{
+    padding-top: 10px;
+    color: #6d6a6a ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+.view-card button{
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;
+    background-color: rgb(241, 9, 9);
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+.view-card button:hover{
+    background-color:red ;
+    transition:background-color 0.1s;
+}
+.view-card .add-message{
+      padding:15px 10px ;
+      border: 1px solid #e8e8e8;
+    
+}
+.add-busket .small-image img {
+    width: 120px;
+    display: block;
+    height: 130px;
+    margin-top: 10px;  
+    margin-left: -20px;  
+}
+.add-busket .full-image img{
+    /* width: 500px; */
+    height:550px ;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.adding-detail{
+    padding-left: 20px;
+    width: 200px;
+    padding-top: 20px;
+    /* position: absolute;
+    right: 86px; */
+}
+/* .flower{
+    width: 200px;
+} */
+.flower-name-price{
+width: 400px;
+}
+
+.flower-name-price h2{
+    font-size: 38px;
+    line-height: 1.447em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #2b2b2b;    
+    font-weight: 400;
+}
+.flower-name-price p.info{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    opacity: 0.8;
+    width: 385px;
+}
+.price{
+    line-height: 1.6em;
+    font-size: 15px;
+    opacity: 0.7;
+}
+.count-flower{
+    display: flex;
+    justify-content: space-between;
+    width: 383px;
+   margin-top: 20px;
+    border: 1px solid #b8afaf;
+    height: 50px;
+}
+.count-flower p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    opacity: 0.9;
+    padding: 10px;
+}
+.count-flower button{
+    background-color: #080808;
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;    
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+.count-flower button:hover{
+    transition: opacity 0.1s;
+    opacity: 0.8;
+}
+.categori{
+    margin-top: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.categori span{
+    opacity: 0.8;
+}
+/* view description informatin  */
+.flower{
+    padding: 15px 25px ;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.flower-info{
+  padding: 30px 0;
+  padding-left: 0;
+}
+.flower-info span{
+    opacity: 0.8;
+    font-size: 15px;
+
+}
+.flower-info h6{
+    font-size: 17px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flower-info h3{
+    color: #2b2b2b;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.4em;
+}
+.flower-info p{
+    opacity: 0.8;
+    margin-top: 15px;
+    line-height: 1.6em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+.flower-info h1{
+    font-size: 30px;
+    line-height: 24px;
+    margin: 3px 0 60px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flower-info .expert-wiew{
+    margin-top: 15px;
+}
+.expert-wiew img{
+    width: 90px;
+}
+.expert-detail p span{
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    line-height: 15px;}
+.expert-wiew input{
+ height: 60px;
+display: block;
+}
+.expert-wiew button{
+    background-color: rgb(241, 9, 9);
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;    
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    margin-top: 10px;
+}
+.active{
+    background-color: rgb(236, 26, 26);
+    color: white;
+}
+#first-view,#second-view,#last-view{
+    display: none;
+}
