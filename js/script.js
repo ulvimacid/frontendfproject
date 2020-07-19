@@ -48,30 +48,7 @@ $(document).ready(function(){
         //  });
         // sticky navbar
 
-        // tabs 
-            let menus= document.querySelectorAll(".menu div")
-            let content=document.querySelectorAll(".content div");
-            for (const menu of menus) {
-            menu.addEventListener("click",function(){
-                
-                let active=document.querySelector(".active")
-            
-                active.classList.remove("active");
-                this.classList.add("active")
-                let index =this.getAttribute("data-index")
-                
-                content.forEach(content=>{
-                    if (content.getAttribute("data-index")==index) {
-
-                    content.classList.remove("d-none");   
-                    }
-                    else{
-                        content.classList.add("d-none");
-                    }
-                    })
-                })
-                
-            }
+       
         //    view 
         $("#description").click(function(){
             $("#first-view").slideToggle()            
@@ -90,24 +67,11 @@ $(document).ready(function(){
     //    first slider
     
 
-                    $(".slider-gallery").owlCarousel({
-                        items: 4,
-                        mouseDrag: true,
-                        dots: true,
-                        nav:true,
-                        autoplay: true,
-                        loop: true,
-                        animateOut: "fadeOut",
-                        smartSpeed: 800
-                    });
-            
+                   
 
 
-                // last slider               
-                    $(".up").click(function(){
-                        $("html").animate({scrollTop: $(".header").offset().top})
-                      });
-                     
+                
+
     
 
 })
@@ -136,13 +100,6 @@ btnleft.addEventListener("click",function(){
         activ.parentNode.lastElementChild.classList.add("activ")
     }                   
 })
-$(".slider-gallery").owlCarousel({
-    items: 4,
-    mouseDrag: true,
-    dots: true,
-    nav:true,
-    autoplay: true,
-    loop: true,
-    animateOut: "fadeOut",
-    smartSpeed: 800
-});
+
+
+
