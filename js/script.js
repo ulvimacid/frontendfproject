@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+    $(".up").click(function(){
+        $("html").animate({scrollTop: $(".header").offset().top})
+         });
     
     $(document).on("click","#joincolorbounch",function(){
 
@@ -26,28 +30,7 @@ $(document).ready(function(){
             $(".fa-bars").addClass("d-block")
             $(this).siblings().css("opacity","1")
          })
-        //  $(".home-li").click(function(){
-        //     $(this).parent().children(2).slideDown()
-        //     $(this).parent().siblings().not(".fa-times").css("opacity","0")
-        //      $(this).addClass("d-none");
-           
-        //  })
-        //  $(".responsive-ul a").click(function(event){
-        //      $(".responsive-ul").
-        //     event.preventDefault();
-        //   });
-        //   $(".shop").mouseenter(function(event){
-        //     $(".dhop").css({
-        //         opacity:"1",
-        //         visibility: "visible" })           
-        //  });
-        //  $(".dhop").mouseleave(function(event){
-        //     $(".dhop").css({
-        //         opacity:"0",
-        //         visibility: "hidden" })           
-        //  });
-        // sticky navbar
-
+      
        
         //    view 
         $("#description").click(function(){
@@ -65,14 +48,59 @@ $(document).ready(function(){
       
             
     //    first slider
+    let count=0;
+    $("#toup").click(function(){
+        count++
+       if (count>0) {
+        $("#howmuch").text(count) 
+       }    
+    })
+    $("#tolow").click(function(){
+        count--
+       if (count>-1) {
+        $("#howmuch").text(count) 
+       } 
+      if (count<1) {
+        count=0; 
+      }   
+    })
+    $("#showcount").click(function(){
+      if (count>0) {
+        $("#aboutcartcount").css("display","block")
+        $("#amountcount").text(count) 
+      } 
+    })   
     
-
-                   
-
-
-                
-
+    $(".x").click(function(){
+        localStorage.clear()
+        let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+        $("#busketlength").text(arr.length)     
+    })  
     
+    //progress bar
+    $("#showprogres").click(function(){
+        event.preventDefault()
+        $('.skill-per').each(function() {
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width", per + '%');
+            $({
+                animatedValue: 0
+            }).animate({
+                animatedValue: per
+            }, {
+                duration: 1000,
+                step: function() {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%');
+                },
+                complete: function() {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%');
+                }
+            });
+        });
+    })
+   
+
 
 })
 

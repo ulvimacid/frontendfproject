@@ -26,7 +26,9 @@ header .responsive-image{
 /* start nav */
 
 
-
+.fa-search:hover{
+ color: red;
+}
 
 header nav .col-6 >ul { 
   z-index: 19;
@@ -229,7 +231,6 @@ header nav .col-3 .sosial-list li a{
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  /* line-height: 22px; */
   letter-spacing: .1em;
    overflow: hidden;
    height: 100%;
@@ -591,9 +592,6 @@ header{
     display: none;
   }
 }
-.slider2{
-  /* margin-top: 100px; */
-}
 .slider2 img{
   height: 300px;  
 }
@@ -624,6 +622,57 @@ header{
 .card-header {
   cursor: pointer;
 }
-.accordion-active{
+
+.infobasket{
+  position: absolute;
+  left: 0;
+  top: 93%;
+  width: 200px;
+  height: 230px;
+  background-color: teal;
+  padding: 17px;
+  visibility:hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: white;
+}
+.infobasket h4,h3 ,p,button{
+  font-family: Cambria, Cochin,
+   Georgia, Times, 'Times New Roman', serif;
+}
+.x{
+  cursor: pointer;
+  font-size: 15px;
+  color: red;
+
+}
+.infobasket button{
+  display: inline-block;
+  width: 90px;
+  height: 35px;
+  padding: 5px;
+  margin: 2px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+.view{
+  background: #f34f3f; 
+}
+.check{
+  background-color: #000;
+}
+.littleimage{
+  background-image: url("../image/shop2.jpg");
+  background-size: cover;
+}
+.search{
+  position: relative;
+}
+.search:hover .infobasket {
   display: block;
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
 }

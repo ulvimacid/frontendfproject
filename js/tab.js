@@ -27,4 +27,10 @@ $(document).ready(function(){
               })
               
           }
+          //localstorage
+          function Showbusket(){
+            let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+            $("#busketlength").text(arr.length)
+           }
+           Showbusket()
 })

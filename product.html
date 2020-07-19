@@ -26,7 +26,7 @@
                 </a>
                 <ul class="responsive-ul">
                     <i class="fas fa-times"></i>
-                    <li><a href="">Home</a><i class="fas fa-caret-right"></i>
+                    <li><a href="home.html">Home</a><i class="fas fa-caret-right"></i>
                        
                     <div class="li-home">
                         <p><a href="">Main Home</a></p>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-6">
                     <ul class="nav-list">
-                        <li class="main-li"><a href="">Home</a>                           
+                        <li class="main-li"><a href="home.html">Home</a>                           
                                 <ul>
                                     <li><a href=""> Main Home</a></li>
                                     <li><a href="">Grid Home</a></li>
@@ -115,7 +115,7 @@
                                 <li><a href="">Contact Us</a></li>
                             </ul>
                         </li>
-                        <li class="shop"><a href="">Shop</a> 
+                        <li class="shop"><a href="shoplist.html">Shop</a> 
                             <ul>
                                 <li><a href="">Product Type</a>
                                     <i class="fas fa-angle-right"></i>
@@ -189,22 +189,22 @@
                         </li>
                         <li class="main-li"><a href="">Element</a>
                             <ul>
-                                <li><a href="">classic</a></li>
-                                <li><a href="">infografic</a><i class="fas fa-angle-right"></i>
+                                <li><a href="accardion.html">accordion</a></li>
+                                <li><a href="tab.html">tabs</a><i class="fas fa-angle-right"></i>
+                                   <ul class="blog-list">
+                                       <li><a href=""></a></li>
+                                       <li><a href="">merol</a></li>
+                                       <li><a href="">lorme</a></li>
+                                   </ul>
+                               </li>
+                                 <li><a href="progress-bar.html">progress-bar</a><i class="fas fa-angle-right"></i>
                                    <ul class="blog-list">
                                        <li><a href="">lorem</a></li>
                                        <li><a href="">merol</a></li>
                                        <li><a href="">lorme</a></li>
                                    </ul>
                                </li>
-                                 <li><a href="">interactive</a><i class="fas fa-angle-right"></i>
-                                   <ul class="blog-list">
-                                       <li><a href="">lorem</a></li>
-                                       <li><a href="">merol</a></li>
-                                       <li><a href="">lorme</a></li>
-                                   </ul>
-                               </li>
-                                 <li><a href="">typegrapy</a><i class="fas fa-angle-right"></i>
+                                 <li><a href="shoplist.html">shoplist</a><i class="fas fa-angle-right"></i>
                                    <ul class="blog-list">
                                        <li><a href="">lorem</a></li>
                                        <li><a href="">merol</a></li>
@@ -217,12 +217,33 @@
                 </div>
                 <div class="col-3">
                     <ul class="sosial-list">
-                        <li><a href=""><i class="fas fa-search"></i></a></li>
-                        <li><a href=""></a><i class="fas fa-shopping-basket"></i>
+                        <li><a href=""><i class="fas fa-search"></i></a>                        
+                        </li>
+                            <li class="search"><a href=""></a><i class="fas fa-shopping-basket"></i>
+                                                            
+                                <div class="infobasket">
+                                    <div class="row d-flex justify-content-between p-3">
+                                        <div class="col-4 littleimage"></div>
+                                        <div class="col-4">
+                                            <h6>Flower</h6>
+                                            <p>36x265$</p>
+                                        </div>
+                                        <div class="col-4 x"> x</div>
+                                    </div> 
+                                    <div class="row p-3 justify-content-between">
+                                        <h4 class="col-6">Total</h4>
+                                        <p class="col-6 text-muted">9.324$</p>
+                                    </div> 
+                                    <div class="row">
+                                        <button class="view">View cart</button>
+                                        <button class="check">Check out</button>
+                                    </div>                        
+                                </div>
                             <sup>
                                 <p id="busketlength">0</p>
                             </sup>
-                        <li><a href="">Cart($0)</a></li>
+                        <li><a href="">Cart($0)</a>
+                        </li>
                         
                     </ul>
                 </div>
@@ -231,6 +252,7 @@
         </div>              
     </nav>
 </header>
+
 
 <!-- product list  -->
 <section class="product-section">
@@ -247,12 +269,14 @@
 <!-- view card section  -->
 <section class="view-card">
 <div class="container">
-    <div class="row d-flex justify-content-between add-message mt-4">
-        <div class="">
-            <p>“Orange Amaryllis” has been added to your cart.</p>
+   <div id="aboutcartcount">
+    <div  class="row d-flex justify-content-between add-message mt-4 ">
+        <div >
+            <p> <span id="amountcount"></span> - “Orange Amaryllis” has been added to your cart.</p>
         </div>
         <button class="ad-busket"> view card</button>
     </div>
+   </div>
 </div>
 </section>
 
@@ -260,20 +284,20 @@
 <section class="add-busket">
     <div class="container">
         <div class="row mt-5 adding-info">
-            <div class="col-lg-5">
-                <div class="row">
-                    <div class="col-lg-4 small-image ">
-                        <img src="image/shopgalery5.jpg" alt="">
-                        <img src="image/shopgalery3.jpg" alt="">
-                        <img src="image/shopgalery4.jpg" alt="">
-                        <img src="image/shopgalery3.jpg" alt="">
+            <div class="col-lg-7 pl-0">
+                <div class="row pl-0">
+                    <div class="col-lg-4 small-image pl-0 ">
+                        <img onclick="AddImage(0)" src="image/shop5.jpg" alt="">
+                        <img onclick="AddImage(1)" src="image/shop12.jpg" alt="">
+                        <img onclick="AddImage(2)" src="image/shop11.jpg" alt="">
+                        <img onclick="AddImage(3)" src="image/shopgalery3.jpg" alt="">
                     </div>
                     <div class="col-5 full-image">
-                        <img src="image/shopgalery2.jpg" alt="">
+                        <img id="empty" src="" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 pl-5 w-50 ">
+            <div class="col-lg-5 pl-5 w-50 ">
                <div class="col-12 adding-info">
                 <div class="adding-detail ">
                     <div class="flower-name-price ">
@@ -285,8 +309,8 @@
                         condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.</p>
                     </div>
                     <div class="count-flower">
-                        <p>Quantity</p>
-                        <button>Add to Cart</button>                       
+                        <p>Quantity <span id="tolow"><</span><span id="howmuch">0</span><span id="toup">></span> </p>
+                        <button id="showcount">Add to Cart</button>                       
                     </div>
                     <div class="categori">
                     <p>SKU: <span>989873</span></p>
@@ -512,8 +536,18 @@
         </div>
    
 </footer>
+
+
+
 <div class="up"><span><</span></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/script.js"></script>
+<script> 
+ let arrimage=["image/shop5.jpg","image/shop12.jpg","image/shop11.jpg","image/shopgalery3.jpg"]
+    function AddImage(n){
+        document.getElementById("empty").setAttribute("src",arrimage[n])      
+    }  
+    
+</script>
 </body>
 </html>

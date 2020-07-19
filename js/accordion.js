@@ -18,11 +18,22 @@ $(".wrapper-header").click(function(){
 }
     
 })
+$(".up").click(function(){
+  $("html").animate({scrollTop: $(".header").offset().top})
+   });
 
 // html scroll 
+// if ($("html").scrollTop()>100) {
+//   $(".up").css("opacity","1")
+// }
+// alert($("html").scrollTop())
 
-$(".up").click(function(){
-    $("html").animate({scrollTop: $(".header").offset().top})
-     });
+//localstorage 
+
+function Showbusket(){
+  let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+  $("#busketlength").text(arr.length)
+ }
+ Showbusket()
 
 })

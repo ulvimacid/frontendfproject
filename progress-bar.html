@@ -9,6 +9,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" 
     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/progresbar.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -218,7 +219,25 @@
                     <div class="col-3">
                         <ul class="sosial-list">
                             <li><a href=""><i class="fas fa-search"></i></a></li>
-                            <li><a href=""></a><i class="fas fa-shopping-basket"></i>
+                            <li class="search"><a href=""></a><i class="fas fa-shopping-basket"></i>
+                                <div class="infobasket">
+                                    <div class="row d-flex justify-content-between p-3">
+                                        <div class="col-4 littleimage"></div>
+                                        <div class="col-4">
+                                            <h6>Flower</h6>
+                                            <p>36x265$</p>
+                                        </div>
+                                        <div class="col-4 x"> x</div>
+                                    </div> 
+                                    <div class="row p-3 justify-content-between">
+                                        <h4 class="col-6">Total</h4>
+                                        <p class="col-6 text-muted">9.324$</p>
+                                    </div> 
+                                    <div class="row">
+                                        <button class="view">View cart</button>
+                                        <button class="check">Check out</button>
+                                    </div>                        
+                                </div>
                                 <sup>
                                     <p id="busketlength">0</p>
                                 </sup>
@@ -241,6 +260,100 @@
         </div>
     </div> 
 </section>
+
+<!-- Progress-bar -->
+<section>
+    <div class="container-fluid">
+        <div class="row mr-5">
+            <button id="showprogres" class="btn mt-5 ml-5 "> Click</button>
+        </div>
+        <div class="row mr-5">
+            <div class="col-6">
+                <div class="prog">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Lorem</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="95"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Ipsum</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Doler</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="55"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="prog">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Set</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="95"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Amet</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Iam</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="55"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="prog">
+                    <div class="skills skillsbig">
+                        <div class="skill">
+                            <div class="skill-name">Really</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="95"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Tired</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-name">Furtilizing</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="55"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <!-- footer  -->
 <footer >
     <div class="container-fluid ">

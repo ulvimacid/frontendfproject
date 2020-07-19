@@ -45,13 +45,30 @@ $(document).ready(function(){
           })                  
         
       });
+     
+      
+
      function Showbusket(){
       let arr=JSON.parse(localStorage.getItem("flowerbusket"))
       $("#busketlength").text(arr.length)
      }
      Showbusket()
                  
-                     
+         $(".sale-image").mouseenter(function(){
+             $(".hover-sale-flower").css({
+                display:"block",
+                opacity:"0.7"
+             })
+         })
+         $(".sale-image").mouseleave(function(){
+            $(".hover-sale-flower").css({
+               display:"none",
+               opacity:"0"
+            })
+        })
+        
+                
+        
 
 
 })

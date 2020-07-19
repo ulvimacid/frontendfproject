@@ -13,7 +13,6 @@
   transition: background-color 0.5s;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
 .content {
   height: 292px;
   width: 480px;
@@ -22,9 +21,6 @@
   border: 1px solid #ccc;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-/* .active{
-    background-color: #aaa;
-} */
 .active:hover {
   color: #fff !important;
   background-color: #f34f3f !important;
@@ -62,8 +58,7 @@
 }
 .menyular .menyu > div {
   width: 100%;
-  height: 50px;
-  border: 1px solid gray;
+  height: 50px; 
   background-color: orange;
 }
 .menyu-info {
@@ -77,3 +72,15 @@
   background-color: red;
   display: block;
 }
+.tabs-links{
+  border: 1px solid rgb(228, 212, 212);
+}
+
+.tab-text{
+  background-color: white!important;
+  opacity: 0.9;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: black;
+  opacity: 0.9;
+}
+
