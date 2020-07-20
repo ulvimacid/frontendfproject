@@ -28,6 +28,9 @@ $(document).ready(function(){
               localStorage.setItem("flowerbusket",JSON.stringify([]))                            
           }
           let id=this.parentNode.getAttribute("data-id")
+          let image=this.parentNode.previousElementSibling.getAttribute("src")
+          let price=this.previousElementSibling.innerText
+          
          let flowerbusket= JSON.parse(localStorage.getItem("flowerbusket"))
           let result=flowerbusket.find(p=>p.id==id)
           if (result==undefined) {

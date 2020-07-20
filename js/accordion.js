@@ -1,5 +1,19 @@
 $(document).ready(function(){
+  $('.toggle').click(function() {
+    event.preventDefault();
+    let $this = $(this);
 
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show').slideUp(250);
+    } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(250);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(250);
+        $this.find('open').removeClass('open')
+    }
+
+})
 //  accordion
 
 $(".wrapper-header").click(function(){
@@ -22,18 +36,12 @@ $(".up").click(function(){
   $("html").animate({scrollTop: $(".header").offset().top})
    });
 
-// html scroll 
-// if ($("html").scrollTop()>100) {
-//   $(".up").css("opacity","1")
-// }
-// alert($("html").scrollTop())
+ 
 
-//localstorage 
-
-function Showbusket(){
-  let arr=JSON.parse(localStorage.getItem("flowerbusket"))
-  $("#busketlength").text(arr.length)
- }
- Showbusket()
+// function Showbusket(){
+//   let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+//   $("#busketlength").text(arr.length)
+//  }
+//  Showbusket()
 
 })

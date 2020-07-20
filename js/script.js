@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+    //  home page send email 
     $(".up").click(function(){
         $("html").animate({scrollTop: $(".header").offset().top})
          });
@@ -32,7 +32,7 @@ $(document).ready(function(){
          })
       
        
-        //    view 
+        //    view section
         $("#description").click(function(){
             $("#first-view").slideToggle()            
 
@@ -42,12 +42,10 @@ $(document).ready(function(){
         })
         $("#review").click(function(){
             $("#last-view").slideToggle()            
-        })
-
-        //custum tab
+        })   
       
             
-    //    first slider
+    // enter count for sale flower 
     let count=0;
     $("#toup").click(function(){
         count++
@@ -70,11 +68,12 @@ $(document).ready(function(){
         $("#amountcount").text(count) 
       } 
     })   
-    
+    // to clear localstorage 
     $(".x").click(function(){
         localStorage.clear()
-        let arr=JSON.parse(localStorage.getItem("flowerbusket"))
-        $("#busketlength").text(arr.length)     
+        $("#busketlength").text(0)
+        $(".infobasket").css("display","none")
+
     })  
     
     //progress bar
@@ -99,11 +98,58 @@ $(document).ready(function(){
             });
         });
     })
-   
+    // localStorage 
+    function Showbusket(){
+        let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+        $("#busketlength").text(arr.length)
+       }
+       Showbusket()
 
-
+            //window scroll$ icon for scrolling
+            $(window).bind('scroll',function(){
+                if($(window).scrollTop() >100){
+                    $(".up").addClass('d-block');
+                }
+                 else{
+                 $(".up").removeClass('d-block');
+                  } 
+            }) ;
+      //  home last slider
+      let length=$(".box").length;
+      $(".imagecontainer").width(`${length*100}%`)
+      $(".box").width(`${100/length}%`)       
+      
+      let amount=0;
+      $(document).on("click","#righticon",function(){
+      
+         if (amount<length-1) {
+            amount++;        
+          $(".imagecontainer").animate({
+              "margin-left":`-${amount*100}%`
+          })       
+         }else{
+            amount=0;
+             $(".imagecontainer").animate({
+              "margin-left":`0%`
+          }) 
+         }
+      })
+      $(document).on("click","#lefticon" ,Slide)
+      function Slide(){        
+          if (amount>0) {
+            amount--;        
+           $(".imagecontainer").animate({
+               "margin-left":`-${amount*100}%`
+           })       
+          }else{
+            amount=length-1;
+              $(".imagecontainer").animate({
+               "margin-left":`-${100*(length-1)}%`
+           }) 
+          }
+       } 
 })
-
+//  home first slider
 let btnright= document.querySelector(".right");
 let btnleft= document.querySelector(".left");
 btnright.addEventListener("click",function(){                
@@ -129,5 +175,5 @@ btnleft.addEventListener("click",function(){
     }                   
 })
 
-
+// i hope you will like it
 

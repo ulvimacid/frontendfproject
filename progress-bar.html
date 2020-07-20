@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body style="height: 3000px;">
+<body >
     <!-- header   -->
-    <header class="header">
+    <header class="header"id="header">
         <nav >
             <div  class="container-fluid " >
                
@@ -190,22 +190,22 @@
                             </li>
                             <li class="main-li"><a href="">Element</a>
                                 <ul>
-                                    <li><a href="">classic</a></li>
-                                    <li><a href="">infografic</a><i class="fas fa-angle-right"></i>
+                                    <li><a href="accardion.html">accordion</a></li>
+                                    <li><a href="tab.html">tabs</a><i class="fas fa-angle-right"></i>
                                        <ul class="blog-list">
                                            <li><a href="">lorem</a></li>
                                            <li><a href="">merol</a></li>
                                            <li><a href="">lorme</a></li>
                                        </ul>
                                    </li>
-                                     <li><a href="">interactive</a><i class="fas fa-angle-right"></i>
+                                     <li><a href="progress-bar.html">progres</a><i class="fas fa-angle-right"></i>
                                        <ul class="blog-list">
                                            <li><a href="">lorem</a></li>
                                            <li><a href="">merol</a></li>
                                            <li><a href="">lorme</a></li>
                                        </ul>
                                    </li>
-                                     <li><a href="">typegrapy</a><i class="fas fa-angle-right"></i>
+                                     <li><a href="shoplist.html">shoplist</a><i class="fas fa-angle-right"></i>
                                        <ul class="blog-list">
                                            <li><a href="">lorem</a></li>
                                            <li><a href="">merol</a></li>
@@ -251,6 +251,7 @@
         </nav>
     </header> 
     <!-- tabs section   -->
+    <!-- header name  -->
  <section class="product-section">
     <div class="container-fluid">
         <div class="row pl-5">
@@ -263,13 +264,13 @@
 
 <!-- Progress-bar -->
 <section>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row mr-5">
             <button id="showprogres" class="btn mt-5 ml-5 "> Click</button>
         </div>
         <div class="row mr-5">
             <div class="col-6">
-                <div class="prog">
+                <div class="prog w-100">
                     <div class="skills">
                         <div class="skill">
                             <div class="skill-name">Lorem</div>
@@ -319,12 +320,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>    
 
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="prog">
+       
+            <div class="col-lg-6 w-25">
+                <div class="prog ">
                     <div class="skills skillsbig">
                         <div class="skill">
                             <div class="skill-name">Really</div>
@@ -332,14 +332,12 @@
                                 <div class="skill-per" per="95"></div>
                             </div>
                         </div>
-
                         <div class="skill">
-                            <div class="skill-name">Tired</div>
+                            <div class="skill-name">Ipsum</div>
                             <div class="skill-bar">
                                 <div class="skill-per" per="80"></div>
                             </div>
                         </div>
-
                         <div class="skill">
                             <div class="skill-name">Furtilizing</div>
                             <div class="skill-bar">
@@ -347,9 +345,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
-        </div>
+       </div>
     </div>
 </section>
 
@@ -456,6 +454,7 @@
 <div class="up"><span><</span></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/script.js"></script>
+    inline js to
     <script>
          $(".up").click(function(){
         $("html").animate({scrollTop: $(".header").offset().top})

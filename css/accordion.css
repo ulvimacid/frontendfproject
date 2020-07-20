@@ -4,7 +4,7 @@
     margin-top: 100px;
 }
 .wrapper-header{
-    width: 100%;
+    width: 80%;
     height: 50px;
     color: #1b1b1b;   
     position: relative;
@@ -20,7 +20,7 @@
 
  .wrapper-body{
      padding: 10px;
-    width: 100%;
+    width: 80%;
     height: 170px;
     display: none;
 }
@@ -33,4 +33,3 @@
 .accordion-active{
     display: block !important;
 }
-

@@ -74,6 +74,7 @@
 }
 .tabs-links{
   border: 1px solid rgb(228, 212, 212);
+  color: rgb(58, 52, 52);
 }
 
 .tab-text{
@@ -83,4 +84,6 @@
   color: black;
   opacity: 0.9;
 }
-
+.tab-links-active{
+  background-color: red;
+}
