@@ -47,8 +47,7 @@ $(document).ready(function(){
           Showbusket()
           })                  
         
-      });
-     
+      });   
       
 
      function Showbusket(){
@@ -57,18 +56,18 @@ $(document).ready(function(){
      }
      Showbusket()
                  
-         $(".sale-image").mouseenter(function(){
-             $(".hover-sale-flower").css({
-                display:"block",
-                opacity:"0.7"
-             })
-         })
-         $(".sale-image").mouseleave(function(){
-            $(".hover-sale-flower").css({
-               display:"none",
-               opacity:"0"
-            })
-        })
+        //  $(".sale-image").mouseenter(function(){
+        //      $(".hover-sale-flower").css({
+        //         display:"block",
+        //         opacity:"0.7"
+        //      })
+        //  })
+        //  $(".sale-image").mouseleave(function(){
+        //     $(".hover-sale-flower").css({
+        //        display:"none",
+        //        opacity:"0"
+        //     })
+        // })
         
                 
         

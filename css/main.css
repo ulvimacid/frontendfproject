@@ -8,7 +8,7 @@
   height: 100px;
   background-color:white;
   z-index: 5000000000000;
-  border-bottom:0.5px solid #2cb978;
+  border-bottom:1px solid #2cb978;
 
 }
 /* responsive nav  */
@@ -87,10 +87,11 @@ header nav .col-6 ul> li>ul>li{
 header nav .col-6 ul> li>ul>li a{
   text-decoration: none;
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   color: #737373;
-  line-height: 19px;
-  font-weight: 500;
+  line-height: 15px;
+  font-weight: 400;
+  border-radius: 5px;
   text-transform: capitalize;
 }
 .fa-angle-right{
@@ -100,13 +101,31 @@ header nav .col-6 ul> li>ul>li a{
 .main-li>ul >li{
   position: relative;
 }
+ /* sticky nav  */
+ .sticky{
+   top: 0;
+   position: fixed;  
+   width: 100%; 
+   transition: all 3s;
+ }
+ .sticky nav{
+   background-color: #00d1ff!important;
+ } .sticky .row{
+   justify-content: center;  
+ }
+
+ .sticky ul>li>ul{
+   background-color:#00d1ff  !important;
+ }
+ .sticky .col-3:last-child{
+   display: none !important;
+ } 
 /* child ul of main shop  */
 .blog-list{
   left: 97% !important;
   top: 25% !important;
   position: absolute;  
   width: 180px !important;
-  height: 150px;
   border-radius: 3px;  
 }
 header nav .col-6> ul> li>ul>li a::after {
@@ -133,7 +152,7 @@ header nav .col-3 .sosial-list li i{
   cursor: pointer;
 }
 header nav .col-3 .sosial-list li sup{
-  background-color: red;
+  background-color: #cc0909;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -170,7 +189,7 @@ header nav .col-3 .sosial-list li a{
 #slider .images .item{
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   opacity: 0;
   transition:opacity 1.5s; 
 }
@@ -182,12 +201,17 @@ header nav .col-3 .sosial-list li a{
 
 #slider .nav{
   position: absolute;
-  top: 45%;
+  top: 35%;
   font-size: 40px;
-  opacity: 0.8;
+  opacity: 0.1;
   display: inline-block;
   padding: 0px 7px;
   cursor: pointer;
+}
+#slider .nav:hover{
+  color: rgb(151, 17, 17);
+  opacity: 1;
+  transition: 0.5s;
 }
 #slider .left{
   left: 0px;
@@ -203,7 +227,7 @@ header nav .col-3 .sosial-list li a{
   position: absolute;
   left: 10%;
   width: 450px;
-  padding: 80px 0px 80px 85px;
+  padding: 80px 0px 80px 0px;
   z-index: 20;
 }
 
@@ -215,9 +239,9 @@ header nav .col-3 .sosial-list li a{
   color: red;
 }
  .leftSide p {
-  margin: 25px 0 30px 0;
+  margin: 25px 0 10px 0;
    color: #696666;
-  font-size: 17.64706px;
+  font-size: 15.64706px;
 }
 /* home page start shop card image  */
 .shop-card,.shop-cart{
@@ -234,10 +258,81 @@ header nav .col-3 .sosial-list li a{
   text-align: center;
   opacity: 0.5;
 }
+.flowPrice2{
+  position: absolute;
+  left: 20%;
+  transition: all 0.5s;
+ 
+}
+.tohover {
+  padding-right: 10px;  
+  height: 20px;
+  overflow: hidden; 
+  position: relative;
+  left: 38%;
+  display: block;
+  width: 50px;
+  background-color: white;
+}
+.tohover p:last-child {
+  transform: translateX(-130%);
+}
 .infoPic { 
   display: flex;
   font-family: Cambria,
-   Cochin, Georgia, Times, 'Times New Roman', serif;
+   Cochin, Georgia, Times,
+    'Times New Roman', serif;
+}
+.filter{
+  cursor: pointer;
+  font-family: Cambria,
+  Cochin, Georgia, 
+  Times, 'Times New Roman', serif;
+
+}
+.tofilter{ 
+  font-family: Cambria,
+  Cochin, Georgia, Times,
+   'Times New Roman', serif;
+  display: flex;
+  justify-content:flex-start;
+  width: 300px;
+  background-color: white; 
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1.5px;
+  
+
+}
+.filter:hover .tofilter{
+  visibility: visible;
+  opacity: 1; 
+  top:100%
+}
+.type-flower{
+  position: relative;
+}
+.tofilter ul>li{
+    padding: 5px 30px; 
+}
+.tofilter li{ 
+list-style: none;
+}
+.tofilter li ul>li{
+  color: black;
+  opacity: 0.8;
+}
+.tofilter li ul>li>a:hover{
+  color: black;
+  opacity: 1;
+}
+.tofilter li a{
+  color: black;
+    text-decoration: none;
 }
  .infoPic div {
   padding: 0px 20px 0px 20px;
@@ -274,7 +369,8 @@ header nav .col-3 .sosial-list li a{
   padding: 30px 0 0px 60px;  
   font-size: 44px;
   font-family: Cambria,
-   Cochin, Georgia, Times, 'Times New Roman', serif;
+   Cochin, Georgia, Times,
+    'Times New Roman', serif;
   font-weight: 400;
 }
 .valentineSection .valMainText span {
@@ -290,6 +386,14 @@ header nav .col-3 .sosial-list li a{
 .valentineSection .heartPng {
   margin-left: 65px;
   color: #979797;
+}
+.valentineSection .rec{
+  width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    right: 43%;
+    border-radius: 50%;
 }
 
 .valentineSection .heartPng img {
@@ -308,7 +412,8 @@ header nav .col-3 .sosial-list li a{
 .flower-expert{
     font-size: 22px;
   font-family: Cambria,
-   Cochin, Georgia, Times, 'Times New Roman', serif;
+   Cochin, Georgia, Times,
+    'Times New Roman', serif;
 }
 .expert-image p{
   color: #1b1b1b;
@@ -388,7 +493,8 @@ header nav .col-3 .sosial-list li a{
   font-size: 30px;
   line-height: 1.4em;
   font-family: Cambria, 
-  Cochin, Georgia, Times, 'Times New Roman', serif;
+  Cochin, Georgia, Times,
+   'Times New Roman', serif;
   font-weight: 400;
 }
 .send-email button{
@@ -411,7 +517,8 @@ header nav .col-3 .sosial-list li a{
 }
 .send-email input::placeholder {
   font-family: Cambria, Cochin,
-   Georgia, Times, 'Times New Roman', serif; 
+   Georgia, Times,
+    'Times New Roman', serif; 
   padding-left: 15px;
 }
 .send-email #error{
@@ -442,7 +549,7 @@ header nav .col-3 .sosial-list li a{
   width: 400%;
   height: 100%;
 }
-.box{
+.box, .box3{
   font-family: Cambria, Cochin,
   Georgia, Times, 'Times New Roman', serif; 
   overflow: hidden;
@@ -463,7 +570,7 @@ header nav .col-3 .sosial-list li a{
 .lefticon, .righticon {
   position: absolute;
   z-index: 1000;
-  top: 43%;
+  top: 40%;
   color: black;
   font-size: 30px;
   cursor: pointer;
@@ -483,14 +590,16 @@ header nav .col-3 .sosial-list li a{
   color:  #6d6a6a;
   text-decoration: none;
   font-family: Cambria, Cochin,
-   Georgia, Times, 'Times New Roman', serif;
+   Georgia, Times,
+    'Times New Roman', serif;
 }
 .footer-links a:hover{
   color: red;
 }
 .footer-links h6{
    font-family: Cambria,
-    Cochin, Georgia, Times, 'Times New Roman', serif;
+    Cochin, Georgia, Times,
+     'Times New Roman', serif;
    color: #1b1b1b;
    font-size: 17px;
    line-height: 2em;
@@ -504,13 +613,15 @@ header nav .col-3 .sosial-list li a{
   color: #afafaf;
   text-decoration: none;
   font-family: Cambria,
-  Cochin, Georgia, Times, 'Times New Roman', serif;
+  Cochin, Georgia, Times,
+   'Times New Roman', serif;
 }
 .footer-end p{
   font-size: 15px;
   color: #afafaf;
   font-family: Cambria,
-   Cochin, Georgia, Times, 'Times New Roman', serif;
+   Cochin, Georgia, Times,
+    'Times New Roman', serif;
 }
 .footer-end p span{
   color: #645f5f;
@@ -540,15 +651,15 @@ header nav .col-3 .sosial-list li a{
   background-color: #f34f3f;
   color: white; 
   transform: rotate(90deg);
-  cursor: pointer;
   display: none;
+  cursor: pointer;  
 }
 /* tabs  */
 .card-header {
   cursor: pointer;
 }
 
-/* hower busket in navbar to show list of flower  */
+/* hover busket in navbar to show list of flower  */
 .infobasket{
   z-index: 111111111063;
   position: absolute;
@@ -562,6 +673,7 @@ header nav .col-3 .sosial-list li a{
   opacity: 0;
   transition: all 0.5s;
   background-color: white;
+  
 }
 .infobasket h4,h3 ,p,button{
   font-family: Cambria, Cochin,
@@ -597,15 +709,460 @@ header nav .col-3 .sosial-list li a{
 .search{
   position: relative;
 }
-.search:hover .infobasket {
-  display: block;
+.search:hover .infobasket{
   visibility: visible;
   opacity: 1;
-  top: 100%;
 }
+
 /* one box to show in responsive in last slider  */
 .box-1{
+  text-align: center;
+}
+/* accordion page */
+ul.accordion {
+  list-style: none;
+  padding: 0;
+}
+
+ul.accordion .inner {
+  padding-left: 1em;
+  overflow: hidden;
   display: none;
+}
+
+ul.accordion li.accordion-box {
+  margin: 0.5em 0;
+}
+
+ul.accordion li.accordion-box a.toggle {
+  width: 100%; 
+  display: block;
+  color: #2f2f2f;
+  padding: 0.75em;
+  border-radius: 0.15em;
+  border: 1px solid rgb(153, 153, 153);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.toggle .sign {
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+ul.accordion li.accordion-box a.toggle:hover {
+  background-color: red;
+  color: white;
+  transition: all 1s;
+}
+/* product page  */
+.product{
+  padding: 50px 20px;
+}
+.product h1{
+    color: #0e0e0e;  
+    font-size: 50px;
+    line-height: 1.32em;
+    font-weight: 400;
+    font-family: Cambria, 
+    Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product-section{
+    background-color: #F7F7F7;
+}
+.product p{
+    vertical-align: middle;
+    font-family: Cambria, 
+    Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #6d6a6a  
+}
+/* end product  */
+
+/* start view  card */
+
+.view-card p{
+    padding-top: 10px;
+    color: #6d6a6a ;
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+#aboutcartcount{
+    display: none;
+}
+.view-card button{
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;
+    background-color: rgb(241, 9, 9);
+    font-size: 15px;
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+.view-card button:hover{
+    background-color:red ;
+    transition:background-color 0.1s;
+}
+ .add-message{
+      padding:15px 10px ;
+      border: 1px solid #e8e8e8;
+      display: none;
+    
+}
+.add-busket .small-image img {
+    width: 120px;
+    display: block;
+    height: 130px;
+    margin-top: 10px;      
+    cursor: pointer;
+}
+.add-busket .full-image img{
+    height:550px ;    
+    width: 300px;
+}
+.adding-detail{  
+    width: 200px;
+    padding-top: 20px;
+    }
+.flower-name-price{
+width: 300px;
+}
+.flower-name-price h2{
+    font-size: 38px;
+    line-height: 1.447em;
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #2b2b2b;    
+    font-weight: 400;
+}
+.flower-name-price p.info{
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif;  
+    opacity: 0.8;
+    width: 385px;
+}
+.price{
+    line-height: 1.6em;
+    font-size: 15px;
+    opacity: 0.7;
+}
+.count-flower{    
+    display: flex;
+    justify-content: space-between;
+    width: 383px;
+   margin-top: 20px;
+    border: 1px solid #b8afaf;
+    height: 50px;
+}
+.count-flower p{
+    font-family: Cambria,
+     Cochin, Georgia, 
+     Times, 'Times New Roman', serif; 
+    opacity: 0.9;
+    padding: 10px;
+}
+.count-flower button{
+    background-color: #080808;
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;    
+    font-size: 15px;
+    font-family: Cambria,
+     Cochin, Georgia, 
+     Times, 'Times New Roman', serif;    
+}
+.count-flower button:hover{
+    transition: opacity 0.1s;
+    opacity: 0.8;
+}
+.categori{
+    margin-top: 32px;
+    font-family: Cambria,
+     Cochin, Georgia,
+      Times, 'Times New Roman', serif;
+}
+.categori span{
+    opacity: 0.8;
+}
+/* view description informatin  */
+.flower{
+    padding: 15px 25px ;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.flower-info{
+  padding: 30px 0;
+  padding-left: 0;
+}
+.flower-info span{
+    opacity: 0.8;
+    font-size: 15px;
+
+}
+.flower-info h6{
+    font-size: 17px;
+ font-family: Cambria, Cochin,
+  Georgia, Times, 'Times New Roman', serif;
+}
+.flower-info h3{
+    color: #2b2b2b;
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.4em;
+}
+.flower-info p{
+    opacity: 0.8;
+    margin-top: 15px;
+    line-height: 1.6em;
+    font-family: Cambria,
+     Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+.flower-info h1{
+    font-size: 30px;
+    line-height: 24px;
+    margin: 3px 0 60px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia,
+     Times, 'Times New Roman', serif;
+}
+.flower-info .expert-wiew{
+    margin-top: 15px;
+}
+.expert-wiew{
+  width: 700px;
+}
+.expert-wiew img{
+    width: 90px;
+    
+}
+.expert-detail p span{
+    color: black;
+    font-family: Cambria, Cochin,
+     Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    line-height: 15px;}
+.expert-wiew input{
+ height: 60px;
+display: block;
+}
+.expert-wiew button,#showprogres{
+    background-color: rgb(241, 9, 9);
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    display: inline-block;
+    width: 150px;    
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia,
+     Times, 'Times New Roman', serif;  
+    margin-top: 10px;
+}
+.active{
+    background-color: rgb(236, 26, 26);
+    color: white;
+}
+.display-view{
+    display: none;
+}
+.add-cart{
+    background-color: #cc0909;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    height: 40px;
+    display: inline-block;
+    width: 120px; 
+    opacity: 0.7;
+    outline: none;   
+    font-size: 15px;
+    font-family: Cambria, Cochin,
+     Georgia, Times, 'Times New Roman', serif;  
+}
+.add-cart:hover{
+    background-color: rgb(236, 26, 26);
+    opacity: 1;
+    transition: opacity 0.5s;
+
+}
+.new-flower,.sold-flower{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color:#cc0909;
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    color: white;    
+text-transform: uppercase;
+}
+.sold-flower{
+    background-color: rgb(7, 7, 6);
+}
+.to-sale-card{
+width: 98%;
+color: #1b1b1b;
+font-size: 12px;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: .1em;
+ overflow: hidden;
+ height: 100%;
+}
+.hover-sale-flower span{
+    display: block;
+    margin-top: 5px;
+}
+.hover-sale-flower button{
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #cc0909;
+    border: none;
+    border-radius: 1px;
+    text-transform: uppercase;
+    color: white;
+    height: 40px;
+    display: inline-block;
+    width: 120px; 
+    opacity: 0.7;   
+    font-size: 15px;
+    font-family: Cambria, Cochin,
+     Georgia, Times, 'Times New Roman', serif;
+}
+.fa-angle-left,.fa-angle-right{
+    font-size: 10px;
+}
+#tolow,#toup{
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#howmuch{
+    margin: 0 4px 0 4px;
+}
+/* progress bar page  */
+
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  margin-left: 50px;
+}
+
+.skillsbig {
+  max-width: 1200px !important;
+  margin: 150px 0px 150px 100px;
+  margin-bottom: 100px;
+  margin-left: 150px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 3px;
+  background: #cacaca;
+  border-radius: 8px;
+}
+
+.skill-per {
+  height: 3px;
+  background-color: rgb(243, 79, 63);
+  border-radius: 8px;
+  width: 0;
+  transition: 1s linear;
+  position: relative;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  color: rgb(32, 31, 31);
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  background-color: #000;
+  top: -16px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+/* tabs page  */
+.product-section {
+  margin-top: 50px;
+}
+.section {
+  margin-top: 151px;
+}
+
+.menyular .menyu {
+  width: 200px;
+}
+.menyular .menyu > div {
+  width: 100%;
+  height: 50px; 
+  background-color: orange;
+}
+.menyu-info {
+  position: absolute;
+  background-color: green;
+  height: 200px;
+  width: 600px;
+  display: none;
+}
+.menyu-active {
+  background-color: red;
+  display: block;
+}
+.tabs-links{
+  border: 1px solid rgb(228, 212, 212);
+  color: rgb(58, 52, 52);
+}
+/* animation  */
+.expert-animation,.expert-animation1,.blog-animation,.blog-center-card,.shoplist-animation,.choose-image-animation,.image-animation{
+  opacity: 0;
+}
+.image-animation.animated,
+.expert-animation.animated,
+.blog-animation.animated,
+.expert-animation1.animated,
+.blog-center-card.animated,
+.shoplist-animation.animated,
+.choose-image-animation.animated
+{
+  opacity: 1;
 }
 
 /* media  */
@@ -613,32 +1170,47 @@ header nav .col-3 .sosial-list li a{
 @media screen and (max-width: 1100px) {
  
   /* navbar section  */
+  .sticky img{
+    margin-right: 30px;
+    width: 100px;
+  }
+  .flower-info .expert-wiew{
+    width: 300px;
+    padding-left: 60px;
+  }
+  #first-view,#second-view {
+   padding-left: 45px;
+  }
+  #last-view h1{
+    padding-left: 50px;
+  }
 header{
   overflow: hidden;
 }
   header .responsive-image{
     display: inline-block;
-    width: 300px;
-    height: 100%;
+    width: 250px;
+    height: 90%;
     margin-left: 50px;
   }
   /* icon to show respn nav */
   .fa-bars{
     display: block;
     right: 25px;
-    top: 30px;
+    top: 35px;
     position: absolute;
     color: black;
     cursor: pointer;
+    font-size: 20px;
   }
   /* to close respon nav */
   .fa-times{
     right: 30px;
-    top: 30px;
+    top: 35px;
     position: absolute;
     color: rgb(243, 161, 8);
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
   }
   /* icon to show dropdown in child li  */
     .fa-caret-right{
@@ -670,28 +1242,34 @@ header{
     justify-content: center;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    width: 50%;
+    width: 100%;
     background-color:white;
+    font-size: 17px;
   }
   .responsive-ul >li{
     list-style: none;
     padding: 10px 15px;
   }
-  .responsive-ul li> a{
+  .responsive-ul li a{
    text-decoration: none;
     color: #0e0e0e;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding: 11px 0;;
+    text-transform: capitalize;
+    padding: 5px 0;   
   }
+  .responsive-ul .ul-body a{
+    text-decoration: none;
+     color: #0e0e0e;
+     font-weight: 500;
+     opacity: 0.7;
+     letter-spacing: .1em;
+     padding: 11px 0;;
+   }
     /*open and close respons nav  */
  .nav-active{
     transform: translateX(0%);
   } 
-  .li-home,.li-shop,.li-element,.li-portfolio,.li-page,.li-blog{
-    display: none;
-  } 
+  
   /* home page sections for responsive */
   .left,.right{
     display: none;
@@ -700,18 +1278,18 @@ header{
     display: flex;
     flex-direction: column;
     font-family: Cambria, Cochin,
-     Georgia, Times, 'Times New Roman', serif;
+    Georgia, Times, 
+     'Times New Roman', serif;
   }
-  .leftSide{
-    display: none;
+  .tofilter{
+    flex-direction: column;
+    padding: 5px;
   }
   
   .blog-card{
-    width: 290px;
-  }
-  
-  .valentine-info{
-  
+    width: 200px;
+  }  
+  .valentine-info{  
     width: 350px;
     margin-top: 0;
   }
@@ -726,12 +1304,64 @@ header{
   }
   #lastslider{
     display: none;
-  }
-  .box-1{
-    display: block;
-  }
-  .wrapper-header{
-    width: 50%
+  }  
+  .rotate{
+  transform:rotate(90deg);
+  transition: all 1s;
   }
   
+  .ul-body{
+    display: none;
+    color: black! important;
+  }
+  .leftSide h2{
+    font-size: 20px;
+  }
+  .leftSide p{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 380px) { 
+  .blog-car-image .box-1{
+    display: block;
+  } 
+ .product-section h1{
+   font-size: 30px;
+
+ }
+  .flower-name-price p.info {
+    font-family: Cambria, Cochin,
+     Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.8;
+    width: 275px;
+}
+.count-flower {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+  margin-top: 20px;
+  border: 1px solid #b8afaf;
+  height: 50px
+}
+.flower-info p {
+  opacity: 0.8;
+  width: 270px;
+ 
+}
+.menu{
+  flex-direction: column;
+  padding-left: 50px;
+}
+   .up span{
+    display: none;
+  } 
+
+
+}
+@media screen and (max-width: 790px) {
+  .blog-center-card{
+    flex-direction: column;
+    align-items: center;
+  }
 }

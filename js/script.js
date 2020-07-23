@@ -3,6 +3,8 @@ $(document).ready(function(){
     //  home page send email 
     $(".up").click(function(){
         $("html").animate({scrollTop: $(".header").offset().top})
+        $(".header").removeClass("sticky")
+       
          });
     
     $(document).on("click","#joincolorbounch",function(){
@@ -33,16 +35,22 @@ $(document).ready(function(){
       
        
         //    view section
-        $("#description").click(function(){
-            $("#first-view").slideToggle()            
+        let menus= document.querySelectorAll(".menu div")
+        let content=document.querySelectorAll(".content .flower-info");
+        for (const menu of menus) {
+        menu.addEventListener("click",function(){
+            let index =this.getAttribute("data-index")           
+            content.forEach(content=>{
+                if (content.getAttribute("data-index")==index) {
 
-        })
-        $("#information").click(function(){
-            $("#second-view").slideToggle()            
-        })
-        $("#review").click(function(){
-            $("#last-view").slideToggle()            
-        })   
+                content.classList.remove("display-view");   
+                }
+                else{
+                    content.classList.add("display-view");
+                }
+                })                
+            })            
+        }  
       
             
     // enter count for sale flower 
@@ -65,11 +73,15 @@ $(document).ready(function(){
     $("#showcount").click(function(){
       if (count>0) {
         $("#aboutcartcount").css("display","block")
-        $("#amountcount").text(count) 
+        $("#amountcount").text(count)
+        // $("howmuch").text("0") 
       } 
+      
     })   
-    // to clear localstorage 
+    // to clear localstorage   
+    
     $(".x").click(function(){
+        let arr=JSON.parse(localStorage.getItem("flowerbusket"))        
         localStorage.clear()
         $("#busketlength").text(0)
         $(".infobasket").css("display","none")
@@ -98,12 +110,7 @@ $(document).ready(function(){
             });
         });
     })
-    // localStorage 
-    function Showbusket(){
-        let arr=JSON.parse(localStorage.getItem("flowerbusket"))
-        $("#busketlength").text(arr.length)
-       }
-       Showbusket()
+   
 
             //window scroll$ icon for scrolling
             $(window).bind('scroll',function(){
@@ -118,7 +125,6 @@ $(document).ready(function(){
       let length=$(".box").length;
       $(".imagecontainer").width(`${length*100}%`)
       $(".box").width(`${100/length}%`)       
-      
       let amount=0;
       $(document).on("click","#righticon",function(){
       
@@ -144,10 +150,96 @@ $(document).ready(function(){
           }else{
             amount=length-1;
               $(".imagecontainer").animate({
-               "margin-left":`-${100*(length-1)}%`
+               "margin-left":`-${100*(amount)}%`
            }) 
           }
-       } 
+       }
+      
+
+    
+ 
+
+    $(".li-header").click(function(){          
+        $(this).next().slideToggle("slow")
+        $(this).children(1).toggleClass("rotate")
+    })
+    
+     
+    $(".tohover").mouseenter(function () {
+        $(".hover1").css("transform", "translateX(150%)");
+        $(".hover2").css("transform", "translateX(0%)");
+    });
+    $(".tohover").mouseleave(function () {
+        $(".hover1").css("transform", "translateX(0%)");
+        $(".hover2").css("transform", "translateX(-130%)");
+    });
+    
+
+
+            //  animation 
+            $(".fromhere").waypoint(function(direction){
+                if (direction=="down") {
+                    $(".header").addClass("sticky")
+                }
+                else{
+                    $(".header").removeClass("sticky")
+                }
+            })
+                $(".expert-animation").waypoint(function(direction){
+                    $(".expert-animation").addClass("animated fadeIn")
+                
+                }, {
+                    offset: '50%'
+                    })
+                $(".expert-animation1").waypoint(function(direction){
+                    $(".expert-animation1").addClass("animated fadeIn")
+                   
+                 }, {
+                      offset: '50%'
+                    })
+                    $(".blog-animation").waypoint(function(direction){
+                        $(".blog-animation").addClass("animated fadeInUp")
+                       
+                     }, {
+                          offset: '50%'
+                        })
+                    $(".blog-center-card").waypoint(function(direction){
+                     $(".blog-center-card").addClass("animated fadeinDown")
+                           
+                    }, {
+                       offset: '50%'
+                    })
+                    $(".shoplist-animation").waypoint(function(direction){
+                        $(".shoplist-animation").addClass("animated bounceInRight")
+                              
+                       })
+                       $(".image-animation").waypoint(function(direction){
+                        $(".image-animation").addClass("animated bounceInUp")
+                              
+                       },{
+                        offset: '50%' 
+                      })
+                      $(".choose-image-animation").waypoint(function(direction){
+                        $(".choose-image-animation").addClass("animated fadeinDown")
+                              
+                       }, {
+                          offset: '50%'
+                       })
+             
+            
+                       function Showbusket(){
+                        let arr=JSON.parse(localStorage.getItem("flowerbusket"))
+                        $("#busketlength").text(arr.length)
+                       }
+                       Showbusket()
+
+
+
+
+
+
+
+
 })
 //  home first slider
 let btnright= document.querySelector(".right");

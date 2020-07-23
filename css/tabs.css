@@ -1,0 +1,50 @@
+.titlename {
+    height: 225px;
+    margin-bottom: 100px;
+    padding-top: 60px;
+    padding-left: 100px;
+    background-color: ghostwhite
+}
+.active{
+    color: black!important;
+    background-color: white!important;
+}
+
+.titlename h1 {
+    font-size: 50px;
+    line-height: 1.32em;
+    font-family: 'Times New Roman', Times, serif
+}
+.nav-item:hover {
+    background-color: red;
+}
+.nav-item a {
+    color: black;
+}
+.nav-item {
+    margin-right: 15px;
+}
+#myTabContent {
+    border: wheat 1px solid;
+    padding: 60px 30px 60px 30px;
+}
+.tabbar1,
+.tabbar2,
+.lasttab {
+    margin-bottom: 150px;
+    width: 640px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: red !important;
+}
+
+.nav-pills a {
+    color: black !important;
+}
+
+.lasttab {
+    border: 1px solid wheat;
+    background-clip: padding-box;
+}
